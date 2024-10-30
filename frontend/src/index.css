@@ -1,10 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:.chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  };
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    background-color: #274029;
 }
 
 .site-container {
@@ -19,11 +23,26 @@ a {
   color: #00005b;
 }
 .btn-outline-primary:hover {
-  background-color: #00727a;
+  background-color: #004346;
 }
 .btn-outline-primary {
-  color: #00727a;
-  border-color: #00727a;
+  color: #60712F;
+  background-color:#B0E298;
+  border-color: #317B22;
+}
+
+/* App.css or index.css */
+.category-text {
+  color: #508991; /* Change this to your desired color for "Category" */
+  
+}
+
+.category-color{
+  color: #9EA93F;
+}
+
+.sidebar-text {
+  color: #FFFFFF; /* Change this to your desired color for sidebar items */
 }
 
 .products {
@@ -54,6 +73,7 @@ a {
   height: 80px;
 }
 .small-container {
+
   max-width: 600px;
 }
 .checkout-steps > div {
@@ -65,7 +85,7 @@ a {
   color: #00727a;
 }
 .form-check-input:checked {
-  background-color: #00727a !important;
+  background-color: #5D737E !important;
   border-color: #00727a !important;
 }
 .btn-paystack {
@@ -74,9 +94,9 @@ a {
   font-size: 14px;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  background-color: #00727a;
+  background-color: #4C5760;
   font-weight: bold;
-  color: #ffffff;
+  color: #93A8AC;
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -92,8 +112,9 @@ a {
   height: 100%;
   position: absolute;
   left: -300px;
-  background-color: #100901;
+  background-color: #5B7B7A;
   transition: 0.5s;
+  color:#60712F;
 }
 .site-container {
   transition: 0.4s;

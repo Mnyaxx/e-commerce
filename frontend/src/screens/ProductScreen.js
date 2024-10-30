@@ -156,13 +156,13 @@ export default function ProductScreen() {
               ></Rating>
             </ListGroup.Item>
             <ListGroup.Item>
-              Price : <strong> GH₵{product.price}</strong>
+              Price : <strong> {product.price}KES</strong>
             </ListGroup.Item>
             <ListGroup.Item>
               <Row xs={1} md={2} className="g-2">
                 {[product.image, ...product.images].map((x) => (
                   <Col key={x}>
-                    <Card>
+                    <Card >
                       <Button
                         className="thumbnail"
                         type="button"
@@ -186,7 +186,7 @@ export default function ProductScreen() {
             <Card.Body>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  Price : <strong> GH₵{product.price}</strong>
+                  Price : <strong> {product.price}KES</strong>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>

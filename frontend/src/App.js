@@ -77,10 +77,10 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar bg="success" variant="dark" expand="lg">
             <Container>
               <Button
-                variant="dark"
+                variant="muted"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars" />
@@ -90,7 +90,7 @@ function App() {
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBar />
+                <SearchBar className="bg-dark" />
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Cart
@@ -147,12 +147,12 @@ function App() {
           className={
             sidebarIsOpen
               ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+              : 'side-navbar d-flex justify-content-between flex-wrap flex-column-text'
           }
         >
-          <Nav className="flex-column text-white w-100 p-2">
+          <Nav className="category-text flex-column text-green w-100 p-2">
             <Nav.Item>
-              <strong>Categories</strong>
+              <strong className="category-color">Categories</strong>
             </Nav.Item>
 
             {categories.map((category) => (
@@ -161,7 +161,7 @@ function App() {
                   to={`/search?category=${category}`}
                   onClick={() => setSidebarIsOpen(false)}
                 >
-                  <Nav.Link>{category}</Nav.Link>
+                  <Nav.Link  className='text-success'>{category}</Nav.Link>
                 </LinkContainer>
               </Nav.Item>
             ))}

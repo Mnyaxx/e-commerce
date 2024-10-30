@@ -36,15 +36,15 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '$1 to $50',
+    name: '1KES to 50KES',
     value: '1-50',
   },
   {
-    name: '$51 to $200',
+    name: '51KES to 200KES',
     value: '51-200',
   },
   {
-    name: '$201 to $1000',
+    name: '201KES to 1000KES',
     value: '201-1000',
   },
 ];
@@ -130,7 +130,7 @@ export default function SearchScreen() {
   return (
     <div>
       <Helmet>
-        <title>Search Products</title>
+        <title className='category-text'>Search Products</title>
       </Helmet>
       <Row>
         <Col md={3}>
@@ -139,7 +139,7 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === category ? 'text-bold' : ''}
+                  className={'all' === category ? 'text-bold' : 'category-text'}
                   to={getFilterUrl({ category: 'all' })}
                 >
                   Any
@@ -148,7 +148,7 @@ export default function SearchScreen() {
               {categories.map((c) => (
                 <li key={c}>
                   <Link
-                    className={c === category ? 'text-bold' : ''}
+                    className={c === category ? 'text-bold' : 'category-text'}
                     to={getFilterUrl({ category: c })}
                   >
                     {c}
@@ -162,7 +162,7 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === price ? 'text-bold' : ''}
+                  className={'all' === price ? 'text-bold' : 'category-text'}
                   to={getFilterUrl({ price: 'all' })}
                 >
                   Any
@@ -172,7 +172,7 @@ export default function SearchScreen() {
                 <li key={p.value}>
                   <Link
                     to={getFilterUrl({ price: p.value })}
-                    className={p.value === price ? 'text-bold' : ''}
+                    className={p.value === price ? 'text-bold' : 'category-text'}
                   >
                     {p.name}
                   </Link>
@@ -187,7 +187,7 @@ export default function SearchScreen() {
                 <li key={r.name}>
                   <Link
                     to={getFilterUrl({ rating: r.rating })}
-                    className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
+                    className={`${r.rating}` === `${rating}` ? 'text-bold' : 'category-text'}
                   >
                     <Rating caption={' & up'} rating={r.rating}></Rating>
                   </Link>
@@ -196,7 +196,7 @@ export default function SearchScreen() {
               <li>
                 <Link
                   to={getFilterUrl({ rating: 'all' })}
-                  className={rating === 'all' ? 'text-bold' : ''}
+                  className={rating === 'all' ? 'text-bold' : 'category-text'}
                 >
                   <Rating caption={' & up'} rating={0}></Rating>
                 </Link>
@@ -211,7 +211,7 @@ export default function SearchScreen() {
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             <>
-              <Row className="justify-content-between mb-3">
+              <Row className="justify-content-between mb-3 category-text">
                 <Col md={6}>
                   <div>
                     {countProducts === 0 ? 'No' : countProducts} Results

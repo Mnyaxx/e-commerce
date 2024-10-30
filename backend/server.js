@@ -11,7 +11,7 @@ import uploadRouter from './routes/uploadRoutes.js';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect("mongodb+srv://myranyakiamo11:4RcAVvAEFH0WIGma@cluster1.phk26.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     console.log('connected to db');
   })
@@ -46,7 +46,7 @@ const _dirname = path.resolve();
 app.use(express.static(path.join(_dirname, '/frontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(_dirname, '/frontend/build/index.html'));
+  res.sendFile(path.join(_dirname, '../frontend/build/index.html'));
 });
 
 const port = process.env.PORT || 5000;

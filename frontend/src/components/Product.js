@@ -28,18 +28,18 @@ export default function Product(props) {
   };
 
   return (
-    <Card>
+    <Card className="category-text" style={{ backgroundColor: '#28a745', color:'#white'}}>
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
-      <Card.Body>
+      <Card.Body className="category-text">
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>
           <strong>
-            GH₵
+            KES
             {product.price}
           </strong>
         </Card.Text>

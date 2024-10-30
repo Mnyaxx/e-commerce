@@ -49,15 +49,15 @@ export default function CartScreen() {
               Your basket is empty. <Link to="/">Go Shopping</Link>
             </MessageBox>
           ) : (
-            <ListGroup>
+            <ListGroup className='category-text'>
               {cartItems.map((item) => (
                 <ListGroupItem key={item.slug}>
-                  <Row className="align-items-center">
+                  <Row className="align-items-center category-text">
                     <Col md={4}>
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="img-fluid rounded img-thumbnail"
+                        className="img-fluid rounded img-thumbnail category-text"
                       />
                       {''}
                       <Link to={`/product/${item.slug}`}> {item.name}</Link>
@@ -86,7 +86,7 @@ export default function CartScreen() {
                       {''}
                     </Col>
                     <Col md={3}>
-                      <strong> GH₵ {item.price} </strong>
+                      <strong>  {item.price}KES </strong>
                     </Col>
                     <Col md={2}>
                       <Button
@@ -109,7 +109,7 @@ export default function CartScreen() {
                 <ListGroup.Item>
                   <h3>
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-                    items) : GH₵
+                    items) : KES
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>
